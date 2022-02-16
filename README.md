@@ -1,16 +1,38 @@
 # pages_ui_prototype
 
-A new Flutter project.
+A sample project to implement a prototype of building widgets hierarchy.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+to change building widgets, change `_pages` value in `app.dart` file :
 
-A few resources to get you started if this is your first Flutter project:
+```
+  static const _pages = [
+    models.Page(
+      title: 'page 1, level 1',
+    ),
+    models.Page(
+      title: 'page 2, level 1',
+      pages: [
+        models.Page(
+          title: 'page 3, level 2',
+        ),
+        models.Page(
+          title: 'page 4, level 2',
+          pages: [
+            models.Page(
+              title: 'page 5, level 3',
+            ),
+            models.Page(
+              title: 'page 6, level 3',
+            ),
+          ],
+        ),
+      ],
+    ),
+  ];
+```
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This project using flutter draggable and dragTarget widgets.
+Models are located in `/models/` folder.
+Widgets are located in `/widgets/` folder.
