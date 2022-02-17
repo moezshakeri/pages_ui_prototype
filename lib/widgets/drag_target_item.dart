@@ -19,7 +19,6 @@ class _DragTargetItemState extends State<DragTargetItem> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 300,
       color: Colors.lightBlue.withOpacity(0.2),
       child: Column(
         children: [

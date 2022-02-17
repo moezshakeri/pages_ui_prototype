@@ -63,17 +63,17 @@ class _AppState extends State<App> {
           width: 100,
         ),
         Center(
-          child: SizedBox(
-            width: 300,
-            child: Column(
-              children: [
-                const SizedBox(
-                  height: 100,
-                ),
-                const Text('drop here !'),
-                _buildPages(),
-              ],
-            ),
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 100,
+              ),
+              const Text('drop here !'),
+              SizedBox(
+                width: 300,
+                child: _buildPages(),
+              ),
+            ],
           ),
         ),
       ],
